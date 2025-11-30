@@ -1,0 +1,571 @@
+/********************************
+Bootstrap Variables Override
+**********************************/
+:root {
+    /* Replace your primary color from your UI Kit */
+    --bs-primary:#2EE3AD;
+
+    /* Replace your secondary color from your UI Kit  */
+    --secondary-color:#99246A;
+
+    /* Replace the main body font from your UI Kit */
+    --bs-font-sans-serif: 'Balsamiq Sans', sans-serif;
+
+}
+
+/********************************
+Global Styles and UI Components
+**********************************/
+.container-fluid{
+    width: auto;
+    height: auto;
+}
+
+header {
+    background-image: url("../images/nav_background_2.png");
+    background-size: cover;
+    width: auto;
+    align-items: left;
+}
+
+.navbar-toggler {
+    margin-right: 25px;
+    background-color: #FFF9FD;
+}
+
+.dropdown-menu.dropdown-menu-dark {
+    background-color: #99246A;
+    border: none;
+}
+
+.dropdown-menu.dropdown-menu-dark .dropdown-item {
+    color: #FFF9FD;
+}
+
+.dropdown-menu.dropdown-menu-dark .dropdown-item:hover {
+    background-color: #1B0D10;
+    color: #FFF9FD;
+}
+
+hr {
+    border: none;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 100%;
+    margin: 0;
+}
+
+hr.top-breaker {
+    background-image: url("../images/section-break-top_2.png");
+    height: 102px;
+}
+
+hr.bottom-breaker {
+    background-image: url("../images/section-break-bottom_2.png");
+}
+
+.card {
+    border-radius: 20px;
+    border-color: transparent;
+    background-image: url("../images/custom-card-2.png");
+    background-color: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card-2 {
+    color: transparent;
+    text-align: center;
+}
+
+    .card-content {
+        display: flex;
+        align-content: left;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 32px;
+    }
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-break {
+    background-image: url("../images/footer-break-v3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100px;
+}
+
+.btn-primary {
+    font-size: 17px;
+    font-family: Balsamiq Sans, sans-serif;
+    font-weight: 700;
+    text-align: center;
+    color: #1B0D10;
+    background-color: #2EE3AD;
+    border-width: 0;
+}
+
+.btn-primary:hover{
+    background-color: #99246A;
+    color: #FFF9FD;
+}
+
+.btn-secondary {
+    font-size: 17px;
+    font-family: Balsamiq Sans, sans-serif;
+    font-weight: 700;
+    text-align: center;
+    color: #FFF9FD;
+    background-color: #3B322A;
+    border-width: 0;
+}
+
+.btn-secondary:hover {
+    background-color: #99246A;
+    color: #FFF9FD;
+}
+
+#btn-2.btn-primary {
+    font-size: 17px;
+    font-weight: 700;
+    text-align: center;
+    color: #FFF9FD;
+    background-color: #1B0D10;
+    border-width: 0%;
+}
+
+#btn-2.btn-primary:hover{
+    background-color: #FFF9FD;
+    color: #1B0D10;
+}
+
+.Contact-button,
+.guestbook-button,
+#about-button,
+.services-button {
+    text-align: center;
+}
+
+#about-button,
+.services-page-button,
+.services-button {
+    padding-top: 40px;
+}
+
+/********************************
+Typography
+**********************************/
+h1 {
+    color: #FFF9FD;
+    font-family: DynaPuff, sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+}
+
+h2 {
+    font-family: DynaPuff, sans-serif;
+    font-size: 58px;
+    font-weight: 600;
+    text-align: left;
+}
+
+h3 {
+    font-family: DynaPuff, sans-serif;
+    font-size: 50px;
+    font-weight: 500;
+    text-align: left;
+    color: #FFF9FD;
+}
+
+h4 {
+    font-family: Gluten, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+h5 {
+    font-family: Gluten, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #99246A;
+}
+
+.Recommended-card {
+    color: #1B0D10;
+}
+
+.Recommended-card:hover {
+    color: #FFF9FD;
+}
+
+.body {
+    font-size: 16px;
+    font-family: Balsamiq Sans, sans-serif;
+    line-height: 28px;
+    text-align: left;
+    color: #3B322A;
+}
+
+ul {
+    list-style-type: none;
+    font-family: Balsamiq Sans, sans-serif;
+    font-size: 12px;
+    padding-bottom: 0px;
+    padding-left: 50px;
+    text-align: left;
+}
+
+p {
+    font-family: Balsamiq Sans, sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFF9FD;
+}
+
+a {
+    font-family: Balsamiq Sans, sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+    color: #FFF9FD;
+}
+
+.navbar-brand {
+    margin-left: 25px;
+    color: #1B0D10;
+    font-family: Gluten, sans-serif;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.nav-item .nav-link {
+    color: #FFF9FD;
+    font-family: Balsamiq Sans, sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 36px;
+    margin-right: 20px;
+    padding-left: 12px;
+}
+
+.hero-text {
+    align-items: center;
+
+}
+
+.hero-text h4 {
+    color: #FFF9FD;
+    font-weight: 400;
+}
+
+.hero-text .Call-to-action {
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.guestbook-desc{
+    padding-bottom: 32px;
+}
+
+.About-me-title {
+    font-size: 58px;
+    font-weight: 600;
+    text-align: left;
+    color: #FFF9FD;
+}
+
+.bio-blockquote {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.showcase-detail-title{
+    color: #3B322A;
+    text-align: center;
+}
+
+.page-title {
+    color:#3B322A;
+}
+
+.page-title-2 {
+    color: #FFF9FD;
+}
+
+.project-background-title-1 {
+    color: #3B322A;
+}
+
+.project-background-title-2 {
+    color: #FFF9FD;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.project-detail-h3 {
+    color: #99246A;
+}
+
+.project-detail-body {
+    text-align: left;
+    padding-left: 36px;
+    padding-right: 36px;
+    color: #1B0D10;
+}
+
+.project-background-body{
+    text-align: left;
+    padding-left: 42px;
+    padding-right: 42px;
+    color: #FFF9FD;
+}
+
+.guestbook-blockquote {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+}
+
+.guestbook-heading{
+    color: #2EE3AD;
+}
+
+.guestbook-body{
+    text-align: center;
+    color: #FFF9FD;
+}
+
+.guestbook-h5{
+    color: #357F69;
+}
+
+.form-box-title {
+    font-weight: 700;
+    margin: auto;
+}
+
+.Entry-title{
+    text-align: left;
+    color: #FFF9FD;
+}
+
+.subjectEntry{
+    font-weight: 700;
+}
+
+.nameEntry{
+    font-style: italic;
+}
+
+.footer-links{
+    font-size: 14px;
+}
+
+.footer-heading{
+    color: #2EE3AD;
+}
+
+.footer-note {
+    font-family: Balsamiq Sans, sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    text-align: right;
+    color: #2EE3AD;
+    margin-top: 12px;
+}
+
+/********************************
+Page-Specific
+**********************************/
+
+/* PAGE: Home */
+
+.down-arrow {
+    text-align: center;
+}
+
+.guestbook-and-services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    background-color: #1B0D10;
+
+}
+
+.gs-column{
+    padding: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .guestbook-and-services {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Also applies to About Page */
+.hero-image {
+    background-image: url("../images/Hero-background.png");
+    background-size: cover;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    #showcase-title-section {
+        width: 100%;
+        text-align: left;
+        color: #3B322A;
+    }
+
+.guestbook-content {
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+img[src="../images/Placeholder-image-2.jpg"] {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.guestbook-image {
+    justify-content: center;
+}
+
+.services-offers {
+    display: grid;
+    justify-content: center;
+    gap: 32px;
+}
+
+@media (max-width: 1024px) {
+  .services-offers {
+    display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+  .services-offers {
+    display: grid;
+  }
+}
+
+.services-content {
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+#about-me-background {
+    background-image: url("../images/AboutMe_background.png");
+    background-size: cover;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+/* PAGE: Project-Category */
+
+.showcase-detail-block {
+    align-content: center;
+    margin: auto;
+}
+
+.showcase-detail-block{
+    padding-bottom: 32px;
+}
+
+/* PAGE: Project-Detail */
+
+img[src="images/KaManao_Logo_2024.png"],
+img[src="images/KaManao_Halloween_Comic_Strip.png"],
+img[src="images/Boquer-Velasco_J_LEGO_character_posed_render003 (1).jpg"],
+img[src="images/daniel-romero-yvBhMMZB9K4-unsplash.jpg"],
+img[src="images/2balazs-ketyi-FeuEg-8XlA8-unsplash.jpg"],
+img[src="images/andrei-anufrienko-ca7a34we-n8-unsplash.jpg"] {
+    max-width: 100%;
+    height: auto;
+}
+
+.project-image-background {
+    background-image: url("../images/Hero-background.png");
+    background-size: cover;
+    padding: 48px 28px;
+}
+
+.Recommended-content{
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+}
+
+/* PAGE: Guestbook */
+
+.guestbook-divider{
+    height: 3px;
+    width: auto;
+    background-color: #99246A;
+}
+
+.guestbookForm-section{
+    background-color: #357F69;
+    width: 500px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#guestbookForm{
+    text-align: center;
+}
+
+.Entries {
+    padding-top: 24px;
+}
+
+.Entry-list{
+    display: flex;
+    padding-left: 48px;
+    background-color: #99246A;
+}
+
+/* PAGE: Services*/
+
+.services-list{
+    justify-content: center;
+    max-width: 100%;
+    gap: 32px;
+}
+
+@media (max-width: 2000px) {
+  .services-list {
+    display: flex;
+  }
+}
+
+@media (max-width: 900px) {
+  .services-list {
+    display: grid;
+  }
+}
+
+/* PAGE: About */
+
+.about-section {
+    background-image: url("../images/Hero-background.png"); 
+    background-size: cover;
+}
