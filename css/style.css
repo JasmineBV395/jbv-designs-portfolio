@@ -471,7 +471,7 @@ img[src="../images/Placeholder-image-2.jpg"] {
 }
 
 #about-me-background {
-    background-image: url("../images/AboutMe_background.png");
+    background-image: url("../images/Hero-background.png");
     background-size: cover;
     width: auto;
     justify-content: center;
