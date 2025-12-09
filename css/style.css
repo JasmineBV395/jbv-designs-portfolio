@@ -128,7 +128,7 @@ footer {
 }
 
 .Contact-button,
-.guestbook-button,
+.msgbrd-button,
 #about-button,
 .services-button {
     text-align: center;
@@ -160,8 +160,7 @@ a,
 .page-title-2,
 .project-background-title-2,
 .project-background-body,
-.guestbook-body,
-.Entry-title,
+.msgbrd-body,
 .btn-primary:hover,
 .btn-secondary,
 .btn-secondary:hover,
@@ -177,8 +176,8 @@ p,
 #btn-2.btn-primary,
 .bio-blockquote,
 .showcase-detail-title,
-.guestbook-blockquote,
-.guestbook-body{
+.msgbrd-blockquote,
+.msgbrd-body{
     text-align: center;
 }
 
@@ -189,7 +188,6 @@ ul,
 .About-me-title,
 .project-detail-body,
 .project-background-body,
-.Entry-title,
 #showcase-title-section {
     text-align: left;
 }
@@ -234,12 +232,7 @@ h5,
 #btn-2.btn-primary:hover,
 .Recommended-card,
 .navbar-brand,
-.project-detail-body,
-.form-box-title,
-.subjectEntry,
-.nameEntry,
-.messageEntry,
-.Entry-list {
+.project-detail-body {
     color: #1B0D10;
 }
 
@@ -308,9 +301,20 @@ a {
     padding-left: 12px;
 }
 
-@media (max-width: 1080px) {
+.nav-item .nav-link:focus,
+    .nav-link:hover {
+    color: var(--bs-primary);
+}
+
+@media (max-width: 1120px) {
     .nav-item .nav-link {
         margin-right: 10px;
+    }
+}
+
+@media (max-width: 1030px) {
+    .nav-item .nav-link {
+        margin-right: 3px;
     }
 }
 
@@ -349,7 +353,7 @@ a {
     border-width: 0;
 }
 
-.guestbook-desc{
+.msgbrd-desc{
     padding-bottom: 32px;
 }
 
@@ -379,35 +383,20 @@ a {
     padding-right: 42px;
 }
 
-.guestbook-blockquote {
+.msgbrd-blockquote {
     font-size: 20px;
     font-weight: 600;
     line-height: normal;
 }
 
-.guestbook-heading,
+.msgbrd-heading,
 .footer-heading,
 .footer-note {
     color: var(--bs-primary);
 }
 
-.guestbook-h5{
+.msgbrd-h5{
     color: #357F69;
-}
-
-.form-box-title {
-    font-weight: 700;
-    margin: auto;
-    background-color: var(--bs-primary);
-}
-
-.subjectEntry{
-    font-weight: 700;
-    background-color: #e373b6;
-}
-
-.nameEntry{
-    font-style: italic;
 }
 
 .form-label{
@@ -439,7 +428,7 @@ Page-Specific
     text-align: center;
 }
 
-.guestbook-and-services {
+.msgbrd-and-services {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
@@ -447,12 +436,12 @@ Page-Specific
 
 }
 
-.gs-column{
+.ms-column{
     padding: 1rem;
 }
 
 @media (max-width: 1024px) {
-  .guestbook-and-services {
+  .msgbrd-and-services {
     grid-template-columns: 1fr;
   }
 }
@@ -472,18 +461,18 @@ Page-Specific
         width: 100%;
     }
 
-.guestbook-content {
+.msgbrd-content {
     align-items: center;
     position: relative;
     text-align: center;
 }
 
-img[src="images/guestbook-visual.png"] {
+img[src="images/padlet-mockup.png"] {
     max-width: 100%;
     max-height: 100%;
 }
 
-.guestbook-image {
+.msgbrd-image {
     justify-content: center;
 }
 
@@ -590,43 +579,12 @@ img[src="images/Boquer-Velasco_J_LEGO_character_posed_render002.jpg"] {
     justify-content: center;
 }
 
-/* PAGE: Guestbook */
+/* PAGE: Message Board */
 
-.guestbook-divider{
+.msgbrd-divider{
     height: 3px;
     width: auto;
     background-color: var(--secondary-color);
-}
-
-.form-control{
-    background-color: #FFF9FD;
-    border-width: 4px;
-    border-color: #9f6086;
-}
-
-.guestbookForm-section{
-    background-image: url("../images/guestbook-form-background.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: auto;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-}
-
-#guestbookForm{
-    text-align: center;
-}
-
-.Entries {
-    padding-top: 24px;
-}
-
-.Entry-list{
-    display: flex;
-    padding-left: 48px;
-    background-image: url("../images/entries_background.png");
-    background-size: cover;
 }
 
 /* PAGE: Services*/
@@ -654,4 +612,12 @@ img[src="images/Boquer-Velasco_J_LEGO_character_posed_render002.jpg"] {
 .about-section {
     background-image: url("../images/Hero-background.png"); 
     background-size: cover;
+}
+
+/* PAGE: Contact */
+
+.form-control{
+    background-color: #FFF9FD;
+    border-width: 4px;
+    border-color: #9f6086;
 }
