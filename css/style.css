@@ -10,6 +10,8 @@ Bootstrap Variables Override
 
     /* Replace the main body font from your UI Kit */
     --bs-font-sans-serif: 'Balsamiq Sans', sans-serif;
+    --bs-font-header: 'DynaPuff', sans-serif;
+    --bs-font-alt: 'Gluten', sans-serif;
 
 }
 
@@ -24,6 +26,7 @@ Global Styles and UI Components
 header {
     background-image: url("../images/nav_background_2.png");
     background-size: cover;
+    background-repeat: no-repeat;
     width: auto;
     align-items: left;
 }
@@ -34,12 +37,8 @@ header {
 }
 
 .dropdown-menu.dropdown-menu-dark {
-    background-color: #99246A;
+    background-color: var(--secondary-color);
     border: none;
-}
-
-.dropdown-menu.dropdown-menu-dark .dropdown-item {
-    color: #FFF9FD;
 }
 
 .dropdown-menu.dropdown-menu-dark .dropdown-item:hover {
@@ -102,48 +101,30 @@ footer {
     height: 100px;
 }
 
-.btn-primary {
-    font-size: 17px;
-    font-family: Balsamiq Sans, sans-serif;
-    font-weight: 700;
-    text-align: center;
-    color: #1B0D10;
-    background-color: #2EE3AD;
-    border-width: 0;
+.social-icons{
+    display: flex;
+    gap: 24px;
 }
 
-.btn-primary:hover{
-    background-color: #99246A;
-    color: #FFF9FD;
+.btn-primary {
+    background-color: var(--bs-primary);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover{
+    background-color: var(--secondary-color);
 }
 
 .btn-secondary {
-    font-size: 17px;
-    font-family: Balsamiq Sans, sans-serif;
-    font-weight: 700;
-    text-align: center;
-    color: #FFF9FD;
     background-color: #3B322A;
-    border-width: 0;
-}
-
-.btn-secondary:hover {
-    background-color: #99246A;
-    color: #FFF9FD;
 }
 
 #btn-2.btn-primary {
-    font-size: 17px;
-    font-weight: 700;
-    text-align: center;
-    color: #FFF9FD;
     background-color: #1B0D10;
-    border-width: 0%;
 }
 
 #btn-2.btn-primary:hover{
     background-color: #FFF9FD;
-    color: #1B0D10;
 }
 
 .Contact-button,
@@ -162,114 +143,210 @@ footer {
 /********************************
 Typography
 **********************************/
-h1 {
+h1,
+h2,
+h3 {
+    font-family: var(--bs-font-header);
+}
+
+h1,
+h3,
+.Recommended-card:hover,
+p,
+a, 
+.nav-item .nav-link,
+.hero-text h4,
+.About-me-title,
+.page-title-2,
+.project-background-title-2,
+.project-background-body,
+.guestbook-body,
+.Entry-title,
+.btn-primary:hover,
+.btn-secondary,
+.btn-secondary:hover,
+#btn-2.btn-primary {
     color: #FFF9FD;
-    font-family: DynaPuff, sans-serif;
-    font-size: 60px;
-    font-weight: 700;
+}
+
+h1,
+p,
+.hero-text .Call-to-action,
+.btn-primary,
+.btn-secondary,
+#btn-2.btn-primary,
+.bio-blockquote,
+.showcase-detail-title,
+.guestbook-blockquote,
+.guestbook-body{
     text-align: center;
 }
 
+h2,
+h3,
+.body,
+ul,
+.About-me-title,
+.project-detail-body,
+.project-background-body,
+.Entry-title,
+#showcase-title-section {
+    text-align: left;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 700;
+}
+
 h2 {
-    font-family: DynaPuff, sans-serif;
     font-size: 58px;
     font-weight: 600;
-    text-align: left;
 }
 
 h3 {
-    font-family: DynaPuff, sans-serif;
     font-size: 50px;
     font-weight: 500;
-    text-align: left;
-    color: #FFF9FD;
+}
+
+h4,
+h5,
+.navbar-brand {
+    font-family: var(--bs-font-alt);
+    font-weight: 700;
 }
 
 h4 {
-    font-family: Gluten, sans-serif;
     font-size: 24px;
-    font-weight: 700;
 }
 
 h5 {
-    font-family: Gluten, sans-serif;
     font-size: 20px;
-    font-weight: 700;
-    color: #99246A;
+    text-decoration: underline;
 }
 
-.Recommended-card {
+h5,
+.project-detail-h3{
+    color: var(--secondary-color);
+}
+
+.btn-primary,
+#btn-2.btn-primary:hover,
+.Recommended-card,
+.navbar-brand,
+.project-detail-body,
+.form-box-title,
+.subjectEntry,
+.nameEntry,
+.messageEntry,
+.Entry-list {
     color: #1B0D10;
 }
 
-.Recommended-card:hover {
-    color: #FFF9FD;
+.body,
+ul,
+p,
+a,
+.nav-item,
+.nav-link,
+.btn-primary,
+.btn-secondary,
+#btn-2.btn-primary,
+.footer-note {
+    font-family: var(--bs-font-sans-serif);
+
 }
 
-.body {
-    font-size: 16px;
-    font-family: Balsamiq Sans, sans-serif;
-    line-height: 28px;
-    text-align: left;
+.body,
+.showcase-detail-title,
+.page-title,
+.project-background-title-1,
+#showcase-title-section{
     color: #3B322A;
 }
 
 ul {
     list-style-type: none;
-    font-family: Balsamiq Sans, sans-serif;
     font-size: 12px;
     padding-bottom: 0px;
     padding-left: 50px;
-    text-align: left;
 }
 
 p {
-    font-family: Balsamiq Sans, sans-serif;
     font-size: 16px;
     line-height: 28px;
-    text-align: center;
-    color: #FFF9FD;
 }
 
 a {
-    font-family: Balsamiq Sans, sans-serif;
     font-size: 12px;
     text-decoration: none;
-    color: #FFF9FD;
 }
 
 .navbar-brand {
     margin-left: 25px;
-    color: #1B0D10;
-    font-family: Gluten, sans-serif;
-    font-size: 50px;
+    font-size: 45px;
     font-weight: 800;
 }
 
+@media (max-width: 520px) {
+    .navbar-brand{
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 450px) {
+    .navbar-brand{
+        font-size: 25px;
+    }
+}
+
 .nav-item .nav-link {
-    color: #FFF9FD;
-    font-family: Balsamiq Sans, sans-serif;
     font-size: 17px;
-    font-weight: 600;
+    font-weight: bolder;
     line-height: 36px;
-    margin-right: 20px;
+    margin-right: 25px;
     padding-left: 12px;
+}
+
+@media (max-width: 1080px) {
+    .nav-item .nav-link {
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 992px) {
+    #nav-highlight:hover {
+        background-color: transparent;
+    }
+    .nav-item .nav-link{
+        color: #3B322A;
+    }
+    .nav-item .nav-link:focus,
+    .nav-link:hover{
+        color: var(--secondary-color);
+        background-color: #1B0D10;
+    }
 }
 
 .hero-text {
     align-items: center;
-
 }
 
 .hero-text h4 {
-    color: #FFF9FD;
     font-weight: 400;
 }
 
 .hero-text .Call-to-action {
     font-weight: 700;
-    text-align: center;
     padding-bottom: 20px;
+}
+
+.btn-primary,
+.btn-secondary,
+#btn-2.btn-primary {
+    font-size: 17px;
+    font-weight: 700;
+    border-width: 0;
 }
 
 .guestbook-desc{
@@ -279,72 +356,39 @@ a {
 .About-me-title {
     font-size: 58px;
     font-weight: 600;
-    text-align: left;
-    color: #FFF9FD;
 }
 
 .bio-blockquote {
     font-size: 20px;
     font-weight: 400;
     line-height: normal;
-    text-align: center;
-}
-
-.showcase-detail-title{
-    color: #3B322A;
-    text-align: center;
-}
-
-.page-title {
-    color:#3B322A;
-}
-
-.page-title-2 {
-    color: #FFF9FD;
-}
-
-.project-background-title-1 {
-    color: #3B322A;
 }
 
 .project-background-title-2 {
-    color: #FFF9FD;
     padding-left: 20px;
     padding-right: 20px;
 }
 
-.project-detail-h3 {
-    color: #99246A;
-}
-
 .project-detail-body {
-    text-align: left;
     padding-left: 36px;
     padding-right: 36px;
-    color: #1B0D10;
 }
 
 .project-background-body{
-    text-align: left;
     padding-left: 42px;
     padding-right: 42px;
-    color: #FFF9FD;
 }
 
 .guestbook-blockquote {
     font-size: 20px;
     font-weight: 600;
     line-height: normal;
-    text-align: center;
 }
 
-.guestbook-heading{
-    color: #2EE3AD;
-}
-
-.guestbook-body{
-    text-align: center;
-    color: #FFF9FD;
+.guestbook-heading,
+.footer-heading,
+.footer-note {
+    color: var(--bs-primary);
 }
 
 .guestbook-h5{
@@ -354,19 +398,20 @@ a {
 .form-box-title {
     font-weight: 700;
     margin: auto;
-}
-
-.Entry-title{
-    text-align: left;
-    color: #FFF9FD;
+    background-color: var(--bs-primary);
 }
 
 .subjectEntry{
     font-weight: 700;
+    background-color: #e373b6;
 }
 
 .nameEntry{
     font-style: italic;
+}
+
+.form-label{
+    font-weight: 700;
 }
 
 .footer-links{
@@ -374,15 +419,13 @@ a {
 }
 
 .footer-heading{
-    color: #2EE3AD;
+    text-decoration: none;
 }
 
 .footer-note {
-    font-family: Balsamiq Sans, sans-serif;
     font-weight: 700;
     font-size: 17px;
     text-align: right;
-    color: #2EE3AD;
     margin-top: 12px;
 }
 
@@ -427,8 +470,6 @@ Page-Specific
 
     #showcase-title-section {
         width: 100%;
-        text-align: left;
-        color: #3B322A;
     }
 
 .guestbook-content {
@@ -437,7 +478,7 @@ Page-Specific
     text-align: center;
 }
 
-img[src="../images/Placeholder-image-2.jpg"] {
+img[src="images/guestbook-visual.png"] {
     max-width: 100%;
     max-height: 100%;
 }
@@ -494,9 +535,24 @@ img[src="../images/Placeholder-image-2.jpg"] {
 img[src="images/KaManao_Logo_2024.png"],
 img[src="images/KaManao_Halloween_Comic_Strip.png"],
 img[src="images/Boquer-Velasco_J_LEGO_character_posed_render003 (1).jpg"],
-img[src="images/daniel-romero-yvBhMMZB9K4-unsplash.jpg"],
-img[src="images/2balazs-ketyi-FeuEg-8XlA8-unsplash.jpg"],
-img[src="images/andrei-anufrienko-ca7a34we-n8-unsplash.jpg"] {
+img[src="images/KaMana'o-Textlogo.jpg"],
+img[src="images/KaManaoDrafts.PNG"],
+img[src="images/KaManaoDrafts_2.PNG"],
+img[src="images/KaManao_Redesign_Drafts.PNG"],
+img[src="images/KaManao_Symbol_Designs.JPG"],
+img[src="images/KaManao_Logo_V2_Emblem2.PNG"],
+img[src="images/comicstrip_sketch.png"],
+img[src="images/IMG_0926.PNG"],
+img[src="images/comicstrip_color_1.png"],
+img[src="images/Lego_character_layout.jpg"],
+img[src="images/Boquer-Velasco_J_LEGO_character_design (2).JPG"],
+img[src="images/Boquer-Velasco_J_build_render001.jpg"],
+img[src="images/Boquer-Velasco_J_build_render002.jpg"],
+img[src="images/Boquer-Velasco_J_LEGO_character_textured_render001.jpg"],
+img[src="images/Boquer-Velasco_J_LEGO_character_textured_render002.jpg"],
+img[src="images/Boquer-Velasco_J_LEGO_character_textured_render003.jpg"],
+img[src="images/Boquer-Velasco_J_LEGO_character_posed_render001.jpg"],
+img[src="images/Boquer-Velasco_J_LEGO_character_posed_render002.jpg"] {
     max-width: 100%;
     height: auto;
 }
@@ -506,6 +562,27 @@ img[src="images/andrei-anufrienko-ca7a34we-n8-unsplash.jpg"] {
     background-size: cover;
     padding: 48px 28px;
 }
+
+@media (max-width: 1500px){
+    .LEGO-visuals{
+        display: flex;
+        max-width: 50%;
+        gap: 24px;
+    }
+}
+@media (max-width: 1000px){
+    .LEGO-visuals{
+        display: grid;
+        justify-content: center;
+        max-width: 100%;
+        gap: 0px;
+    }
+}
+
+.LEGO-visual-2{
+        display: grid;
+        justify-content: center;
+    }
 
 .Recommended-content{
     display: flex;
@@ -518,12 +595,20 @@ img[src="images/andrei-anufrienko-ca7a34we-n8-unsplash.jpg"] {
 .guestbook-divider{
     height: 3px;
     width: auto;
-    background-color: #99246A;
+    background-color: var(--secondary-color);
+}
+
+.form-control{
+    background-color: #FFF9FD;
+    border-width: 4px;
+    border-color: #9f6086;
 }
 
 .guestbookForm-section{
-    background-color: #357F69;
-    width: 500px;
+    background-image: url("../images/guestbook-form-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: auto;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -540,7 +625,8 @@ img[src="images/andrei-anufrienko-ca7a34we-n8-unsplash.jpg"] {
 .Entry-list{
     display: flex;
     padding-left: 48px;
-    background-color: #99246A;
+    background-image: url("../images/entries_background.png");
+    background-size: cover;
 }
 
 /* PAGE: Services*/

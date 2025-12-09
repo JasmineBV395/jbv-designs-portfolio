@@ -63,30 +63,32 @@
 
     <section style="background-color:#81CCB6;">
             <hr class="top-breaker">
-            <div class="container">
+            <div class="container px-4">
                 <h2 class="showcase-detail-title pt-4">Contact Me</h2>
+
                 <div class="contactForm">
-                    <form action="contactform.php" method="post">
+                    <form action="https://api.web3forms.com/submit" method="post">
+                        <input type="hidden" name="access_key" value="1ce3b39e-9dec-4581-aa67-56bc599389ea">
                         <div class="mb-3">
-                            <label for="contactName" class="form-label">Name</label>
-                            <input type="Name" class="form-control" id="contactName" aria-describedby="nameHelp"
-                                aria-required>
+                            <label for="contactName" class="form-label">Name*</label>
+                            <input type="text" class="form-control" id="contactName" name="name" required>
                         </div>
                         <div class="mb-3">
-                            <label for="contactEmail" class="form-label">Email</label>
-                            <input type="Email" class="form-control" id="contactEmail">
+                            <label for="contactEmail" class="form-label">Email*</label>
+                            <input type="email" class="form-control" id="contactEmail" name="email" required>
                         </div>
                         <div class="mb-3">
-                            <label for="contactSubject" class="form-label">Subject</label>
-                            <input type="SubjectTitle" class="form-control" id="contactSubject">
+                            <label for="contactSubject" class="form-label">Subject*</label>
+                            <input type="text" class="form-control" id="contactSubject" name="subject" required>
                         </div>
                         <div class="mb-3">
-                            <label for="contactMessage" class="form-label">
-                                <p></p>Message
-                            </label>
-                            <textarea class="form-control" id="contactMessage" rows="5"></textarea>
+                            <label for="contactMessage" class="form-label">Message*</label>
+                            <textarea class="form-control" id="contactMessage" rows="5" name="message" required></textarea>
                         </div>
+
+                        <input type="hidden" name="redirect" value="https://web3forms.com/success">
                         <div class="Contact-button pt-3 pb-4">
+
                             <button type="submit" class="btn btn-secondary">Submit</button>
                         </div>
                     </form>
@@ -96,7 +98,7 @@
         </div>
     </section>
 
-    <footer style="background-color:#1B0D10;">
+        <footer style="background-color:#1B0D10;">
         <div class="container pt-5">
             <div class="row mx-5">
                 <div class="col-md-4 mb-3">
@@ -123,8 +125,16 @@
                 </div>
                 <div class="col-md-4 mb-3">
                     <ul class="list-inline social-icons">
-                        <li><a href="#" class="text-white">[Email Icon]</a></li>
-                        <li><a href="https://www.behance.net/jasmineboquer-" class="text-white">[Behance Icon]</a></li>
+                        <li>
+                            <a href="https://www.behance.net/jasmineboquer-">
+                                <img src="images/footer_social_behance.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:jasmineboquervelasco@gmail.com">
+                                <img src="images/footer_social_email.png">
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>

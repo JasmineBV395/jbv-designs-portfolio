@@ -8,45 +8,28 @@ var firebaseConfig = {
   appId: "1:78278529136:web:e1444b6cccf3b6143ca4b5"
 };
 
-// Initialize Firebase with the provided configuration object
 firebase.initializeApp(firebaseConfig);
-
 var messagesRef = firebase.database().ref('guestbook');
+
+function escapeHTML(str) {
+  return str.replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039")
+}
 
 document.getElementById("guestbookForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
-  let name = document.getElementById('guestName').value,
-      subject = document.getElementById('guestSubject').value,
-      message = document.getElementById('guestMessage').value;
+  let name = document.getElementById('guestName').value.trim(),
+    subject = document.getElementById('guestSubject').value.trim(),
+    message = document.getElementById('guestMessage').value.trim();
 
-  if (name === "") {
-    alert("Please enter your name.");
-    return;
-  }
-
-  if (subject === "") {
-    alert("Please enter your subject title.");
-    return;
-  }
-
-  if (message === "") {
-    alert("Please enter a message.");
-    return;
-  }
-
-  // Expected schema for guestbook entry:
-  // {
-  //   name: string,        // Name of the guest
-  //   subject: string,     // Subject/title of the entry
-  //   message: string,     // Message content
-  //   timestamp: number    // Unix timestamp in milliseconds
-  // }
   messagesRef.push({
     name: name,
     subject: subject,
-    message: message,
-    timestamp: Date.now()
+    message: message
   });
 
   this.reset();
@@ -62,9 +45,9 @@ messagesRef.on("value", function (snapshot) {
   entries.sort((a, b) => b.timestamp - a.timestamp);
 
   let output = entries.map(entry =>
-    `<p class= subjectEntry>${entry.subject}</p> 
-      <p class= nameEntry>by ${entry.name}</p>
-      <p>${entry.message}</p>
+    `<p class= "subjectEntry">${entry.subject}</p> 
+      <p class= "nameEntry">by ${entry.name}</p>
+      <p class= "messageEntry">${entry.message}</p>
       `).join("");
 
   document.getElementById("guestbookEntries").innerHTML = output;
