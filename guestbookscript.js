@@ -11,14 +11,6 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 var messagesRef = firebase.database().ref('guestbook');
 
-function escapeHTML(str) {
-  return str.replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039")
-}
-
 document.getElementById("guestbookForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -42,12 +34,10 @@ messagesRef.on("value", function (snapshot) {
     entries.push(child.val());
   });
 
-  entries.sort((a, b) => b.timestamp - a.timestamp);
-
   let output = entries.map(entry =>
-    `<p class= "subjectEntry">${entry.subject}</p> 
-      <p class= "nameEntry">by ${entry.name}</p>
-      <p class= "messageEntry">${entry.message}</p>
+    `<p class = "subjectEntry">${entry.subject}</p> 
+      <p class = "nameEntry">by ${entry.name}</p>
+      <p class = "messageEntry">${entry.message}</p>
       `).join("");
 
   document.getElementById("guestbookEntries").innerHTML = output;
