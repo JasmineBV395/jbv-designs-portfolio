@@ -28,7 +28,7 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     width: auto;
-    align-items: left;
+    align-items: flex-start;
 }
 
 .navbar-toggler {
@@ -91,6 +91,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: #1B0D10;
 }
 
 .footer-break {
@@ -130,7 +131,7 @@ footer {
 .Back-to-category-button {
     display: flex;
     justify-content: center;
-    padding-top: 16px;
+    padding-top: 24px;
     padding-bottom: 32px;
 }
 
@@ -145,6 +146,16 @@ footer {
 .services-page-button,
 .services-button {
     padding-top: 40px;
+}
+
+.services-page-button,
+.Contact-button {
+    padding-bottom: 32px;
+}
+
+#about-button,
+.msgbrd-button {
+    padding-bottom: 32px;
 }
 
 
@@ -167,6 +178,7 @@ a,
 .About-me-title,
 .page-title-2,
 .project-background-title-2,
+.Recommended-title,
 .project-background-body,
 .msgbrd-body,
 .btn-primary:hover,
@@ -198,6 +210,11 @@ ul,
 .project-background-body,
 #showcase-title-section {
     text-align: left;
+}
+
+.project-detail-background,
+.project-detail-process{
+    padding: 32px 0px;
 }
 
 h1 {
@@ -361,6 +378,20 @@ a {
     border-width: 0;
 }
 
+.page-title-2,
+.showcase-detail-title,
+.About-me-title,
+.bio-blockquote,
+.msgbrd-introduction,
+.Recommended-title,
+.msgbrd-heading {
+    padding-top: 32px;
+}
+
+.msgbrd-introduction{
+    padding-bottom: 32px;
+}
+
 .msgbrd-desc{
     padding-bottom: 32px;
 }
@@ -372,23 +403,25 @@ a {
 
 .bio-blockquote {
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 600;
     line-height: normal;
 }
 
-.project-background-title-2 {
-    padding-left: 20px;
-    padding-right: 20px;
+.project-detail-title {
+    padding: 0px 32px;
+}
+
+.project-background-title-2,
+.Recommended-title {
+    padding: 0px 20px;
 }
 
 .project-detail-body {
-    padding-left: 36px;
-    padding-right: 36px;
+    padding: 0px 36px;
 }
 
 .project-background-body{
-    padding-left: 42px;
-    padding-right: 42px;
+    padding: 0px 42px;
 }
 
 .msgbrd-blockquote {
@@ -397,14 +430,13 @@ a {
     line-height: normal;
 }
 
-.msgbrd-heading,
 .footer-heading,
 .footer-note {
     color: var(--bs-primary);
 }
 
 .msgbrd-h5{
-    color: #357F69;
+    color: #81CCB6;
     text-decoration: none;
 }
 
@@ -435,6 +467,12 @@ Page-Specific
 
 .down-arrow {
     text-align: center;
+}
+
+.showcase-content,
+.msgbrd-content,
+.services-content {
+    padding: 32px 0px;
 }
 
 .msgbrd-and-services {
@@ -468,17 +506,13 @@ Page-Specific
 
     #showcase-title-section {
         width: 100%;
+        padding-top: 32px;
     }
 
 .msgbrd-content {
     align-items: center;
     position: relative;
     text-align: center;
-}
-
-img[src="images/padlet-mockup.png"] {
-    max-width: 100%;
-    max-height: 100%;
 }
 
 .msgbrd-image {
@@ -517,40 +551,19 @@ img[src="images/padlet-mockup.png"] {
     align-items: center;
 }
 
-/* PAGE: Project-Category */
-
-.showcase-detail-block {
-    align-content: center;
-    margin: auto;
+img[src="images/jasmine_headshot_v1.png"] {
+    padding-bottom: 32px;
 }
 
-.showcase-detail-block{
+/* PAGE: Project-Category */
+
+.card-content-2{
     padding-bottom: 32px;
 }
 
 /* PAGE: Project-Detail */
 
-img[src="images/KaManao_Logo_2024.png"],
-img[src="images/KaManao_Halloween_Comic_Strip.png"],
-img[src="images/Boquer-Velasco_J_LEGO_character_posed_render003 (1).jpg"],
-img[src="images/KaMana'o-Textlogo.jpg"],
-img[src="images/KaManaoDrafts.PNG"],
-img[src="images/KaManaoDrafts_2.PNG"],
-img[src="images/KaManao_Redesign_Drafts.PNG"],
-img[src="images/KaManao_Symbol_Designs.JPG"],
-img[src="images/KaManao_Logo_V2_Emblem2.PNG"],
-img[src="images/comicstrip_sketch.png"],
-img[src="images/IMG_0926.PNG"],
-img[src="images/comicstrip_color_1.png"],
-img[src="images/Lego_character_layout.jpg"],
-img[src="images/Boquer-Velasco_J_LEGO_character_design (2).JPG"],
-img[src="images/Boquer-Velasco_J_build_render001.jpg"],
-img[src="images/Boquer-Velasco_J_build_render002.jpg"],
-img[src="images/Boquer-Velasco_J_LEGO_character_textured_render001.jpg"],
-img[src="images/Boquer-Velasco_J_LEGO_character_textured_render002.jpg"],
-img[src="images/Boquer-Velasco_J_LEGO_character_textured_render003.jpg"],
-img[src="images/Boquer-Velasco_J_LEGO_character_posed_render001.jpg"],
-img[src="images/Boquer-Velasco_J_LEGO_character_posed_render002.jpg"] {
+.project-detail-visuals {
     max-width: 100%;
     height: auto;
 }
@@ -558,7 +571,11 @@ img[src="images/Boquer-Velasco_J_LEGO_character_posed_render002.jpg"] {
 .project-image-background {
     background-image: url("../images/Hero-background.png");
     background-size: cover;
-    padding: 48px 28px;
+    padding: 48px 0px;
+}
+
+.project-detail {
+    padding: 0px 32px;
 }
 
 @media (max-width: 2000px){
@@ -573,7 +590,7 @@ img[src="images/Boquer-Velasco_J_LEGO_character_posed_render002.jpg"] {
         display: grid;
         justify-content: center;
         max-width: 100%;
-        gap: 0px;
+        gap :0px
     }
 }
 
@@ -586,14 +603,27 @@ img[src="images/Boquer-Velasco_J_LEGO_character_posed_render002.jpg"] {
     display: flex;
     gap: 32px;
     justify-content: center;
+    padding: 0px 32px;
 }
 
 /* PAGE: Message Board */
 
-.msgbrd-divider{
+.msgbrd-divider,
+.msgbrd-divider-2 {
     height: 3px;
-    width: auto;
+    width: 75%;
+    margin: auto;
     background-color: var(--secondary-color);
+}
+
+.msgbrd-divider-2{
+    background-color: var(--bs-primary);
+    width: 60%;
+}
+
+img[src="images/padlet-mockup.png"] {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 /* PAGE: Services*/
