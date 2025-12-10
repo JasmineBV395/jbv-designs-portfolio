@@ -554,7 +554,7 @@ img[src="images/Boquer-Velasco_J_LEGO_character_posed_render002.jpg"] {
     padding: 48px 28px;
 }
 
-@media (max-width: 1500px){
+@media (max-width: 2000px){
     .LEGO-visuals{
         display: flex;
         max-width: 50%;
