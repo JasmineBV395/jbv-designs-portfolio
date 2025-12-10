@@ -140,6 +140,7 @@ footer {
     padding-top: 40px;
 }
 
+
 /********************************
 Typography
 **********************************/
@@ -397,6 +398,7 @@ a {
 
 .msgbrd-h5{
     color: #357F69;
+    text-decoration: none;
 }
 
 .form-label{
@@ -488,7 +490,7 @@ img[src="images/padlet-mockup.png"] {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .services-offers {
     display: grid;
   }
@@ -601,7 +603,7 @@ img[src="images/Boquer-Velasco_J_LEGO_character_posed_render002.jpg"] {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .services-list {
     display: grid;
   }
